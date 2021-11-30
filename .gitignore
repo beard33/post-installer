@@ -2,8 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode
 
-##Test stuff
+##Test and tmp stuff
 *test*
+*tmp*
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

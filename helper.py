@@ -1,11 +1,12 @@
 import subprocess
+import os
 
 class Helper:
 
     PackageManager = ""
     Distro = ""
 
-    def __init__(self) -> None:
+    def __init__(self):
         self.detect_distro()
         self.set_package_manager()
 
@@ -19,10 +20,10 @@ class Helper:
                 self.Distro = line[3:]
                 break
             
-    def set_package_manager(self) -> None:
+    def set_package_manager(self):
         if self.Distro in ['fedora', 'redhat'] : self.PackageManager = 'dnf'
-        if self.Distro in ['ubuntu', 'debian', 'popos', 'elementary-os'] : self.PackageManager = 'apt'
-        if self.Distro in ['arch', 'manjaro'] : self.PackageManager = 'pacman'
+        if self.Distro in ['ubuntu', 'debian', 'pop', 'elementary'] : self.PackageManager = 'apt'
+        if self.Distro in ['arch', 'manjaro', 'endeavouros'] : self.PackageManager = 'pacman'
 
     def first_update(self) -> str:
         if self.PackageManager == 'pacman':
@@ -36,4 +37,5 @@ class Helper:
         else:
             return 'sudo ' + self.PackageManager + ' install ' + package
 
-  
+    def is_sudo(self) -> bool:
+        return (os.getuid() == 0)
