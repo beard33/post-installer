@@ -1,0 +1,41 @@
+{
+    "browsers":{
+      "chromium": false,
+      "firefox":true
+    },
+    "codecs":{
+        "ubuntu-restricted-extras":true
+    },
+    "media":{
+      "gimp":true,
+      "inkscape":true,
+      "vlc":false,
+      "dropbox nautilus-dropbox":false,
+      "mpv":true
+    },
+    "development":{
+        "git":true,
+        "geany":false,
+        "neovim":true,
+        "zeal":false,
+        "emacs":false,
+        "gedit":false,
+        "kate":false
+    },
+    "battery":{
+        "tlp tlp-rdw":true
+    },
+    "work":{
+        "geary":false,
+        "thunderbird":true,
+        "libreoffice":true,
+        "okular":false,
+        "calibre":false,
+        "keepassxc":false
+    },
+    "other":{
+        "synaptic":false,
+        "build-essentials":false
+    }
+
+  }
