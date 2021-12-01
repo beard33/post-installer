@@ -1,0 +1,44 @@
+{
+    "browsers":{
+      "chromium": false,
+      "firefox":true
+    },
+    "RPM-fusion":{
+        "sudo rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" : false,
+        "sudo rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm" : false
+    },
+    "codecs":{
+        "ffmpeg-libs":false
+    },
+    "media":{
+      "gimp":false,
+      "inkscape":false,
+      "vlc":false,
+      "dropbox nautilus-dropbox":false,
+      "mpv":true
+    },
+    "development":{
+        "git":false,
+        "geany":false,
+        "neovim":false,
+        "zeal":false,
+        "emacs":false,
+        "gedit":false,
+        "kate":false
+    },
+    "battery":{
+        "tlp tlp-rdw":false
+    },
+    "work":{
+        "geary":false,
+        "thunderbird":false,
+        "libreoffice":false,
+        "okular":false,
+        "calibre":false,
+        "keepassxc":false
+    },
+    "other":{
+
+    }
+
+  }

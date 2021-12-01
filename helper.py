@@ -21,21 +21,23 @@ class Helper:
                 break
             
     def set_package_manager(self):
-        if self.Distro in ['fedora', 'redhat'] : self.PackageManager = 'dnf'
-        if self.Distro in ['ubuntu', 'debian', 'pop', 'elementary'] : self.PackageManager = 'apt'
+        if self.Distro in ['fedora', 'redhat'] : self.PackageManager = 'dnf' 
+        if self.Distro in ['ubuntu', 'debian', 'pop', 'elementary'] : self.PackageManager = 'apt' 
         if self.Distro in ['arch', 'manjaro', 'endeavouros'] : self.PackageManager = 'pacman'
 
     def first_update(self) -> str:
         if self.PackageManager == 'pacman':
-            return 'sudo ' + self.PackageManager + ' -Syu --noconfirm'
+            return 'sudo pacman -Syu --noconfirm'
+        elif self.PackageManager == 'dnf':
+            return 'sudo dnf update -y'
         else:
-            return 'sudo ' + self.PackageManager + ' update'
+            return 'sudo apt update && sudo apt -y upgrade'
 
-    def build_command(self, package :str) -> str:
+    def build_std_command(self, package :str) -> str:
         if self.PackageManager == 'pacman':
             return 'sudo ' + self.PackageManager + ' -S ' + package + ' --noconfirm'
         else:
-            return 'sudo ' + self.PackageManager + ' install ' + package
+            return 'sudo ' + self.PackageManager + ' install ' + package + ' -y'
 
     def is_sudo(self) -> bool:
         return (os.getuid() == 0)
