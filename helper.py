@@ -39,5 +39,8 @@ class Helper:
         else:
             return 'sudo ' + self.PackageManager + ' install ' + package + ' -y'
 
+    def build_flatpak_command(self, package: str) -> str:
+        return 'flatpak install ' + package + ' -y'
+
     def is_sudo(self) -> bool:
         return (os.getuid() == 0)
