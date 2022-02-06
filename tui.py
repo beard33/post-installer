@@ -21,7 +21,12 @@ def print_bold(text :str):
     print(BOLD + text + END)
 
 def user_continue() -> bool:
-    ans = input("Continue? [y/N]\n")
+    ans = input("\nContinue? [y/N]\n")
     if (ans in ['yes', 'y', 'Y', 'YES']):
         return True
     return False
+
+def print_header(element :str): 
+    print_info('\n------------------------------------\n'
+                + element + 
+               '\n------------------------------------') 

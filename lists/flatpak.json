@@ -1,0 +1,6 @@
+{
+    "gnome-software":{
+        "org.gnome.Solanum":true,
+        "org.gnome.gitlab.somas.Apostrophe":false
+    }
+}
