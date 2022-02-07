@@ -1,6 +1,6 @@
 {
     "browsers":{
-      "chromium": false,
+      "chromium": true,
       "firefox":true
     },
     "RPM-fusion":{
